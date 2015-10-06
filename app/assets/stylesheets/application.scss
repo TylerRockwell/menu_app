@@ -21,9 +21,8 @@
      }
 
  .course-picture {
-   display: inline;
-   margin-left: auto;
-   width: 100px;
+   float: left;
+   width: 150px;
  }
 
  .jumbotron {
@@ -99,5 +98,13 @@
  .add-dish-link{
    margin-left: 1%;
    margin-top: 2%;
+   margin-bottom: 2%;
+ }
+
+ .btn-primary{
+   background-color: black;
+   color: $remedy-red;
+   border-color: $remedy-red;
+   margin-top: 1%;
    margin-bottom: 2%;
  }

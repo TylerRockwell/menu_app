@@ -6,6 +6,7 @@ class DishesController < ApplicationController
   def index
     @dishes = Dish.all
     @courses = Course.all
+    @images = ["bpm.png", "SnakeOil1.png", "kola.png"]
   end
 
   # GET /dishes/1

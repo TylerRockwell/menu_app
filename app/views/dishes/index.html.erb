@@ -8,23 +8,23 @@
 </div>
 
 
-
+<% x = 0 %>
 <% @courses.each do |course| %>
   <h2 id="course-name"> <%= course.name %> </h2>
   <hr>
   <p class = "item">
-  <% @dishes.each do |dish| %>
+    <%= image_tag asset_url(@images[x]), class: "course-picture" %>
+    <% x+= 1 %>
+    <% @dishes.each do |dish| %>
       <% if dish.course == course %>
-         <div class="dish-name"> <%= link_to dish.name, edit_dish_path(dish) %></div>
-         <span class="description"> <%= dish.description %></span>
+        <div class="dish-name"> <%= link_to dish.name, edit_dish_path(dish) %></div>
+        <span class="description"> <%= dish.description %></span>
 
          <span class="price"> <%= number_to_currency(dish.price) %></span>
          <br>
+      <% end %>
     <% end %>
-  <% end %>
 
   </p>
   <div class="add-dish-link"> <%= link_to 'Add a new dish to this course', new_dish_path(course) %> </div>
 <% end %>
-
-<%= image_tag asset_url("kola.png"), class: "course-picture" %>
