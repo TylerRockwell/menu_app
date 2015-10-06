@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+*/
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ $remedy-red: #D91D00;
+
+ @font-face {
+         font-family: "Harlow ICG Solid";
+         src: asset_url('Harlow-ICG-Solid.ttf') format("truetype");
+     }
+
+ .course-picture {
+   display: inline;
+   margin-left: auto;
+   width: 100px;
+ }
+
+ .jumbotron {
+   background-color: rgba(217, 19, 0, .7);
+   font-family: "Harlow ICG Solid";
+   text-align: center;
+   color: black;
+   h2{
+     text-decoration: underline;
+   }
+   h1::before{
+     content: "★";
+     float: left;
+     margin-left: 1%;
+   }
+
+   h1::after{
+     content: "★";
+     float: right;
+   }
+ }
+
+ body {
+   background-color: black;
+   color: white;
+   margin-left: 1%;
+   margin-right: 1%;
+ }
+ #course-name{
+   font-family: "Harlow ICG Solid";
+   text-decoration: underline;
+   color: $remedy-red;
+   margin-left: 1%;
+ }
+
+ hr{
+   color: $remedy-red;
+   width: 80%;
+   margin-left: 1%;
+   border-color: $remedy-red;
+   background-color: $remedy-red;
+   color: $remedy-red;
+ }
+
+ a{
+   color: $remedy-red;
+   font-weight: bold;
+ }
+
+ a:hover{
+   color: $remedy-red;
+ }
+
+ .dish-name{
+   display: block;
+   margin: 1%;
+   text-align: left;
+ }
+
+ .description{
+   margin-left: 2%
+ }
+
+ .price{
+  float: right;
+  border: 2px solid $remedy-red;
+  margin-right: 1%;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+ }
+
+ .add-dish-link{
+   margin-left: 1%;
+   margin-top: 2%;
+   margin-bottom: 2%;
+ }

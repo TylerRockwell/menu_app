@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>The Remedy Diner</h1>
+    <h2>Menu</h2>
+  </div>
+</div>
+
+
+
+<% @courses.each do |course| %>
+  <h2 id="course-name"> <%= course.name %> </h2>
+  <hr>
+  <p class = "item">
+  <% @dishes.each do |dish| %>
+      <% if dish.course == course %>
+         <div class="dish-name"> <%= link_to dish.name, edit_dish_path(dish) %></div>
+         <span class="description"> <%= dish.description %></span>
+
+         <span class="price"> <%= number_to_currency(dish.price) %></span>
+         <br>
+    <% end %>
+  <% end %>
+
+  </p>
+  <div class="add-dish-link"> <%= link_to 'Add a new dish to this course', new_dish_path(course) %> </div>
+<% end %>
+
+<%= image_tag asset_url("kola.png"), class: "course-picture" %>
